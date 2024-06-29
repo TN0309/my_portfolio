@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+  font-size: 62,5%;
+  height: 100%;
+}
+ul,ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 24px;
+  height: 100%;
+  background-color: var(--yellow-bg-thema);
+  overflow-x: hidden;
+}
+
+#root{
+  height: 100%;
+}
+
+.container{
+  max-width: 1420px;
+  margin-left: 0 auto;
+}
+
+.App{
+  height: 100%;
+
+  &_main-page-content{
+    height: calc(100% - 80px);
+  }
+}
+

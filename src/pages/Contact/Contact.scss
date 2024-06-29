@@ -1,0 +1,133 @@
+.contact {
+  &_content {
+    padding: 20px;
+
+    &_header-text {
+      color: var(--yellow-sub-thema);
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1rem;
+      letter-spacing: 0.5px;
+      position: relative;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      border-bottom: 2px solid var(--yellow-main-thema);
+    }
+
+    &_header-text::before,
+    &_header-text::after {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 5px;
+      background-color: var(--yellow-main-thema);
+      bottom: -1px;
+    }
+
+    &_header-text::before {
+      left: 0;
+    }
+
+    &_header-text::after {
+      right: 0;
+    }
+
+    &_form {
+      margin-top: 30px;
+
+      &_controlswrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-top: 30px;
+
+        div {
+          position: relative;
+
+          .inputName,
+          .inputEmail,
+          .inputDescription {
+            width: 100%;
+            border: 2px solid var(--yellow-main-thema);
+            padding: 16px 12px;
+            transition: all 0.5s ease;
+            position: relative;
+            background-color: transparent;
+            color: var(--yellow-sub-thema);
+          }
+
+          .nameLabel,
+          .emailLabel,
+          .descriptionLabel {
+            font-weight: 500;
+            position: absolute;
+            top: 7px;
+            left: 12px;
+            transition: all 0.2s ease;
+            color: var(--yellow-sub-thema);
+            font-size: 16px;
+          }
+
+          .inputName:focus,
+          .inputEmail:focus,
+          .inputDescription:focus {
+            outline: none;
+
+          }
+
+          .inputName:focus+.nameLabel,
+          .inputName:valid+.nameLabel,
+          .inputEmail:focus+.emailLabel,
+          .inputEmail:valid+.emailLabel,
+          .inputDescription:focus+.descriptionLabel,
+          .inputDescription:valid+.descriptionLabel {
+            font-size: 18px;
+            top: -23px;
+            left: 0;
+          }
+        }
+      }
+    }
+    button{
+      cursor: pointer;
+      padding: 10px 70px;
+      font-size: 2rem;
+      background: transparent;
+      color: var(--yellow-main-thema);
+      border: 1.5px solid var(--yellow-main-thema);
+      border-radius: 4px ;
+      font-weight: 600;
+
+      &:hover{
+        color: #000;
+        background-color: var(--yellow-main-thema);
+      }
+
+    }
+    .text12 h5{
+      color: var(--yellow-main-thema);
+      font-family: cursive;
+      font-weight: 100;
+    
+    }
+  }
+}
+
+
+@media only screen and (max-width : 768px){
+  .contact_content_form{
+    text-align: center;
+
+    &_controlswrapper{
+      grid-template-columns: repeat(1,1fr);
+      
+    }
+    .text12 h5{
+      font-size: 14px;
+    }
+    button{
+      font-size: 1rem;
+    }
+  }
+}

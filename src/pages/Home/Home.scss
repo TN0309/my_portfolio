@@ -1,0 +1,107 @@
+.home {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  &_text-wrapper {
+    display: flex;
+    align-items: center;
+
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      color: var(--yellow-main-thema);
+      margin: 0px;
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 5rem;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: monospace;
+      animation: typingEffectAnimation 3s steps(50, end);
+      margin-top: 25%;
+
+    }
+
+  }
+
+  .home_contact_me {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  button {
+    cursor: pointer;
+    padding: 10px 65px;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--yellow-main-thema);
+    border: 1px solid var(--yellow-main-thema);
+    border-radius: 4px;
+    font-weight: 500;
+    margin-top: 26px;
+    font-family: monospace;
+
+
+    &:hover {
+      background-color: var(--yellow-main-thema);
+      color: black;
+      transition: 0, 9s ease;
+      font-family: monospace;
+    }
+  }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 449px) {
+
+  .home_text-wrapper h1 {
+    font-size: 25px;
+    line-height: 3rem;
+    margin-top: 40%;
+  }
+
+}
+
+@media only screen and (min-width : 450px) and (max-width : 550px) {
+
+  .home_text-wrapper h1 {
+    font-size: 35px;
+    line-height: 3rem;
+    margin-top: 40%;
+  }
+
+}
+
+@media only screen and (min-width : 551px) and (max-width : 768px) {
+  .home_text-wrapper h1 {
+    font-size: 40px;
+    line-height: 4rem;
+    margin-top: 40%;
+  }
+}
+
+
+@media only screen and (min-width : 769px) and (max-width : 990px) {
+  .home_text-wrapper h1 {
+    font-size: 50px;
+    line-height: 5rem;
+    margin-top: 40%;
+  }
+}
+
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
